@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MID PROJECT | MiniApp</title>
+</head>
+<body>
+    <nav>
+        <table>
+            <tr>
+                <td><h2>Student Management MiniApp</h2></td>
+                <td><a href="index.html">Home</a></td>
+                <td><a href="about.html">About</a></td>
+            </tr>
+        </table>
+    </nav>
+
+    <div class="contents">
+        <p class="title">Student Management</p>
+        <p class="miniapp">MiniApp</p>
+        <hr>
+
+        <table>
+            <tr>
+                <td class="styleTable">
+                    <form id="addStudent-form">
+                        <h3>Add Student</h3>
+                        <button id="btnShowHide" class="btnAdd">Show to Add Student</button><br><br>
+
+                        <hr class="decor">
+
+                        <div id="showAndHide">
+                            <label>Student ID (NIM)</label><br>
+                            <input type="text" placeholder="NIM" class="inputBox" id="studentID" required><br><br>
+
+                            <label>Full Name</label><br>
+                            <input type="text" placeholder="Name" class="inputBox" id="studentName" required><br><br>
+
+                            <label>Gender</label><br>
+                            <input type="radio" name="studentGender" value="Male" required>Male <br>
+                            <input type="radio" name="studentGender" value="Female" required>Female <br><br>
+                            
+                            <label>Faculty</label><br>
+                            <select name="faculty" id="studentFaculty" class="inputBox" required>
+                                <option disabled hidden selected>-- SELECT FACULTY --</option>
+                                <option value="Ekonomi">Ekonomi</option>
+                                <option value="Filsfat">Filsfat</option>
+                                <option value="Pendidikan">Pendidikan</option>
+                                <option value="Pertanian">Pertanian</option>
+                                <option value="Ilmu Komputer">Ilmu Komputer</option>
+                                <option value="Keperawatan">Keperawatan</option>
+                            </select><br><br>
+
+                            <label>Program of Study</label><br>
+                            <select name="prodi" id="studentProdi" class="inputBox" required>
+                                <option disabled hidden selected>-- SELECT PROGRAM OF STUDY --</option>
+                                <option value="Akuntansi">Akuntansi</option>
+                                <option value="Manejemen">Manejemen</option>
+                                <option value="Filsafat Agama Kristen">Filsafat Agama Kristen</option>
+                                <option value="Pendidikan Agama">Pendidikan Agama</option>
+                                <option value="Pendidikan Bahasa Inggris">Pendidikan Bahasa Inggris</option>
+                                <option value="Ekonomi Koperasi">Ekonomi Koperasi</option>
+                                <option value="Pendidikan Guru Luar Sekolah">Pendidikan Guru Luar Sekolah</option>
+                                <option value="Agronomi">Agronomi</option>
+                                <option value="Sistem Informasi">Sistem Informasi</option>
+                                <option value="Teknik Informatika">Teknik Informatika</option>
+                                <option value="Keperawatan">Keperawatan</option>
+                                <option value="Profesi Ners">Profesi Ners</option>
+                            </select><br><br>
+
+                            <input type="submit" value="Add Student" class="btnAdd" id="btnAddStudent">
+                        </div>
+                    </form>
+                </td>
+                <td class="styleSearch">
+                    <h3>Filter Students By</h3>
+
+                    <label>Faculty</label><br>
+                    <input type="text" placeholder="Search student by Faculty" id="searchByFaculty" class="searchBox"></input>
+                    <input type="button" value="Show Students" class="btnSearch" id="facultySearch"><br><br>
+
+                    <label>Program of Study</label><br>
+                    <input type="text" placeholder="Search student by Prodi" name="searchByProdi" id="searchByProdi" class="searchBox"></input>
+                    <input type="button" value="Show Students" class="btnSearch"><br><br>
+                </td>
+            </tr>
+        </table>
+        <hr>
+
+        <center><p class="title2">Our Students</p></center>
+
+        <input type="text" name="searchByName" id="searchByName" class="searchByName" placeholder="Search student by name...">
+        <br><br><br>
+
+
+        <table class="centerTable" border="2">
+            <tr>
+                <th>Student ID (NIM)</th>
+                <th>Full Name</th>
+                <th>Gender</th>
+                <th>Faculty</th>
+                <th>Program of Study</th>
+                <th>Action</th>
+            </tr>
+        </table>
+
+        <ul id="studentList">
+        </ul>
+    </div>
+
+    <footer>
+        <br>
+        <h4>Tiffany Janice Gaby Pejoh &copy; 2021</h4>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
